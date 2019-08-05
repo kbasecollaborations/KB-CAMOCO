@@ -24,13 +24,28 @@ suggestions:
 # Configure the display and description of parameters
 #
 parameters :
-    parameter_1 :
+    genome_ref :
         ui-name : |
-            First parameter
+            Genome
         short-hint : |
-            The first parameter
+            The genome from which to build a coexpression network for
         long-hint  : |
-            The first parameter that needs to be entered to drive the method. This might be the first of many.
+            The genome from which to build a coexpression network for
+
+    association_ref : 
+         ui-name : | 
+             GWAS Association
+         short-hint : |            
+             The GWAS results from which to build a coexpression network for
+         long-hint  : |                                                           
+             The GWAS results from which to build a coexpression network for      
+    trait_matrix_ref : 
+         ui-name : | 
+             Trait matrix         
+         short-hint : |            
+             The trait value matrix from which to build a coexpression network for
+         long-hint  : |                                                           
+             The trait value matrix from which to build a coexpression network for      
 
 description : |
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar efficitur felis, quis tincidunt sem congue at. Vivamus ornare feugiat faucibus. Fusce tincidunt mattis nunc, nec varius purus convallis quis. Nulla facilisi. In at magna dolor. Suspendisse sit amet felis at arcu auctor dapibus vitae pharetra dui. Nam semper mi quis tortor fermentum mollis. Donec a arcu pharetra, rutrum dolor vitae, rutrum mauris. Donec ornare fringilla sagittis. Nam laoreet est in elementum malesuada. Vestibulum id mi eget urna hendrerit feugiat. Donec et ultrices nulla. Phasellus diam eros, dapibus at tempus nec, semper vel ante.</p>

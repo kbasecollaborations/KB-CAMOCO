@@ -1,2 +1,4 @@
 test_local
 sdk.cfg
+lib/GEMMA_GWAS/GEMMA_GWASImpl.bak*
+lib/camoco/camocoImpl.py.bak*

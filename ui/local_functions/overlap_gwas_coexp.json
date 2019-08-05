@@ -1,11 +1,11 @@
 {
-   "name" : "parseMotifSet",
-   "short_description" : "Parse the output of a supported motif finding application into a KBaseGeneRegulation.MotifSet dictionary",
-   "long_description" : "This function parses the output text files from motif finder applications and returns a constructured dictionary element to type KBaseGeneRegulation.MotifSet",
+   "name" : "overlap_gwas_coexp",
+   "short_description" : "Find GWAS and Co-expression network overlap",
+   "long_description" : "Using prioritized genes from a GWAS, find overlap between a coexpression network and GWAS to determine if GWAS genes are coexpressed",
    "tags" : {
-     "categories" : [],
+     "categories" : ["coexpression", "gwas"],
      "input": {
-       "file_types": ["txt"],
+       "file_types": [],
        "kb_types": []
      },
      "output": {

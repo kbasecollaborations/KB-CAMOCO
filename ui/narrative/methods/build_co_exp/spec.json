@@ -1,7 +1,9 @@
 {
     "ver": "0.0.1",
     "authors": [
-        "rmr"
+        "rmr",
+        "prajan77",
+        "man4ish_gupta"
     ],
     "contact": "",
     "categories": ["active"],
@@ -11,14 +13,36 @@
     },
     "parameters": [ 
         {
-            "id": "parameter_1",
-            "optional": true,
+          "id": "genome_ref",
+          "optional": false,
+          "advanced": false,
+          "allow_multiple": false,
+          "default_values": [ "" ],
+          "field_type": "text",
+          "text_options": {
+            "valid_ws_types": ["KBaseGenomes.Genome"]
+          }
+        },
+        {
+            "id": "association_ref",
+            "optional": false,
             "advanced": false,
             "allow_multiple": false,
             "default_values": [ "" ],
             "field_type": "text",
             "text_options": {
-                "valid_ws_types": [ ]
+                "valid_ws_types": ["KBaseGenomes.Genome"]
+            }
+        },
+        {
+            "id": "trait_matrix_ref",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "valid_ws_types": ["KBaseMatrices.TraitMatrix"]
             }
         }
     ],
@@ -26,7 +50,7 @@
         "service-mapping": {
             "url": "",
             "name": "camoco",
-            "method": "run_camoco",
+            "method": "build_co_exp_network",
             "input_mapping": [
                 {
                     "narrative_system_variable": "workspace",
@@ -35,8 +59,14 @@
                     "narrative_system_variable": "workspace_id",
                     "target_property": "workspace_id"
                 },{
-                    "input_parameter": "parameter_1",
-                    "target_property": "parameter_1"
+                    "input_parameter": "genome_ref",
+                    "target_property": "genome_ref"
+                },{
+                    "input_parameter": "association_ref",
+                    "target_property": "association_ref"
+                },{
+                    "input_parameter": "trait_matrix_ref",
+                    "target_property": "trait_matrix_ref"
                 }
             ],
             "output_mapping": [
