@@ -6,8 +6,28 @@ MAINTAINER KBase Developer
 # install line here, a git checkout to download code, or run any other
 # installation scripts.
 
-# RUN apt-get update
+RUN apt-get -y update && apt-get install -y \
+    curl \
+	lsb-release \ 
+    wget \
+    git \
+    gcc \
+    build-essential \
+    libqt5gui5 \
+	apt-transport-https \
+    python3
 
+RUN pip install --upgrade -q pip
+
+RUN pip install 'urllib3<1.24,>=1.21.1'
+
+RUN pip install camoco
+
+#RUN mkdir -p /kb/module/work/tmp/src/ && \
+#    cd /kb/module/work/tmp/src/ && \
+#    git clone https://github.com/LinkageIO/Camoco.git && \
+#    cd Camoco/ && \
+#    python setup.py install
 
 # -----------------------------------------
 

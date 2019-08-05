@@ -81,6 +81,7 @@ class camoco:
         # ctx is the context object
         # return variables are: output
         #BEGIN parse_gwas
+        output = {}
         #END parse_gwas
 
         # At some point might do deeper type checking...
