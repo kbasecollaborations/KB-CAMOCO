@@ -358,10 +358,10 @@ class Application(object):
                              name='camoco.buildgwas',
                              types=[dict])
         self.method_authentication['camoco.buildgwas'] = 'required'  # noqa
-        self.rpc_service.add(impl_camoco.overlap,
-                             name='camoco.overlap',
+        self.rpc_service.add(impl_camoco.overlapgwas,
+                             name='camoco.overlapgwas',
                              types=[dict])
-        self.method_authentication['camoco.overlap'] = 'required'  # noqa
+        self.method_authentication['camoco.overlapgwas'] = 'required'  # noqa
         self.rpc_service.add(impl_camoco.status,
                              name='camoco.status',
                              types=[dict])

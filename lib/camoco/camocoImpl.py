@@ -24,7 +24,7 @@ class camoco:
     ######################################### noqa
     VERSION = "0.0.1"
     GIT_URL = "https://github.com/kbasecollaborations/KB-CAMOCO.git"
-    GIT_COMMIT_HASH = "3e05ac8fae4053dedc4e8006315022c8f6170c13"
+    GIT_COMMIT_HASH = "1639b49e277a7deef779d918c43cdef3df4f5392"
 
     #BEGIN_CLASS_HEADER
     #END_CLASS_HEADER
@@ -196,7 +196,7 @@ class camoco:
         # return the results
         return [output]
 
-    def overlap(self, ctx, params):
+    def overlapgwas(self, ctx, params):
         """
         :param params: instance of type "FindGWASCoexpOverlapParams" ->
            structure: parameter "window_size" of Long, parameter
@@ -208,12 +208,12 @@ class camoco:
         """
         # ctx is the context object
         # return variables are: output
-        #BEGIN overlap
-        #END overlap
+        #BEGIN overlapgwas
+        #END overlapgwas
 
         # At some point might do deeper type checking...
         if not isinstance(output, dict):
-            raise ValueError('Method overlap return value ' +
+            raise ValueError('Method overlapgwas return value ' +
                              'output is not type dict as required.')
         # return the results
         return [output]
