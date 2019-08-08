@@ -55,8 +55,8 @@ elif [ "${1}" = "init" ] ; then
   # curl -L -sH 'Accept-encoding: gzip' -O "${Expr3}" && gunzip -f "${Expr3##*/}"
   # curl -L -sH 'Accept-encoding: gzip' -O "${GWASZM2}" && gunzip -f "${GWASZM2##*/}"
 
-  if [ -f "/data/${RefGenfile::-3}" && -f "/data/${Expr1file::-3}" && -f "/data/${GOBASEfile::-3}" \
-        && -f "/data/${GOZMfile::-3}" && -f "/data/${GWASZMfile::-3}"]; then
+  if [ -f "/data/${RefGenfile::-3}" && -f "/data/${Expr1file::-3}"\
+   && -f "/data/${GOBASEfile::-3}" && -f "/data/${GOZMfile::-3}" && -f "/data/${GWASZMfile::-3}"]; then
     touch __READY__
   else
     echo "Init failed"
