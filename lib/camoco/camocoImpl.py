@@ -24,7 +24,7 @@ class camoco:
     ######################################### noqa
     VERSION = "0.0.1"
     GIT_URL = "https://github.com/kbasecollaborations/KB-CAMOCO.git"
-    GIT_COMMIT_HASH = "b28eb7f18d73baa37b4c4ec16c716115c5042f5c"
+    GIT_COMMIT_HASH = "ada08dec0ac3e0ad21cb90fa2867200887d76514"
 
     #BEGIN_CLASS_HEADER
     #END_CLASS_HEADER

@@ -89,12 +89,18 @@ module camoco {
     } ReportResults;
 
     /* KBase Handling function */
-    funcdef build_co_exp_network(CoexpNetworkInputParams params) returns (ReportResults output) authentication required;
+    funcdef build_co_exp_network(CoexpNetworkInputParams params)
+        returns (ReportResults output) authentication required;
 
     /* Camoco wrapping function */
-    funcdef buildrefgen(BuildRefGenInputParams params) returns (build_camoco_obj_out output) authentication required;
-    funcdef buildcob(BuildCOBInputParams params) returns (build_camoco_obj_out output) authentication required;
-    funcdef buildontology(BuildOntologyInputParams params) returns (build_camoco_obj_out output) authentication required;
-    funcdef buildgwas(BuildGWASInputParams params) returns (build_camoco_obj_out output) authentication required;
-    funcdef overlapgwas(FindGWASCoexpOverlapParams params) returns (build_camoco_obj_out output) authentication required;
+    funcdef buildrefgen(BuildRefGenInputParams params)
+        returns (build_camoco_obj_out output) authentication required;
+    funcdef buildcob(BuildCOBInputParams params)
+        returns (build_camoco_obj_out output) authentication required;
+    funcdef buildontology(BuildOntologyInputParams params)
+        returns (build_camoco_obj_out output) authentication required;
+    funcdef buildgwas(BuildGWASInputParams params)
+        returns (build_camoco_obj_out output) authentication required;
+    funcdef overlapgwas(FindGWASCoexpOverlapParams params)
+        returns (build_camoco_obj_out output) authentication required;
 };
