@@ -35,14 +35,49 @@
             }
         },
         {
-            "id": "trait_matrix_ref",
+            "id": "exp_matrix_ref",
             "optional": false,
             "advanced": false,
             "allow_multiple": false,
             "default_values": [ "" ],
             "field_type": "text",
             "text_options": {
-                "valid_ws_types": ["KBaseMatrices.TraitMatrix"]
+                "valid_ws_types": ["KBaseMatrices.ExpressionMatrix"]
+            }
+        },
+        {
+            "id": "ontology",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "valid_ws_types": ["KBaseOntology.OntologyDictionary"]
+            }
+        },
+        {
+            "id": "window_size",
+            "optional": true,
+            "advanced": true,
+            "allow_multiple": false,
+            "default_values": [ 1 ],
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "int",
+                "min_integer" : 1
+            }
+        },
+        {
+            "id": "flank_limit",
+            "optional": true,
+            "advanced": true,
+            "allow_multiple": false,
+            "default_values": [ 1 ],
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "int",
+                "min_integer" : 1
             }
         }
     ],
@@ -65,8 +100,14 @@
                     "input_parameter": "association_ref",
                     "target_property": "association_ref"
                 },{
-                    "input_parameter": "trait_matrix_ref",
-                    "target_property": "trait_matrix_ref"
+                    "input_parameter": "exp_matrix_ref",
+                    "target_property": "exp_matrix_ref"
+                },{
+                    "input_parameter": "window_size",
+                    "target_property": "window_size"
+                },{
+                    "input_parameter": "flank_limit",
+                    "target_property": "flank_limit"
                 }
             ],
             "output_mapping": [
