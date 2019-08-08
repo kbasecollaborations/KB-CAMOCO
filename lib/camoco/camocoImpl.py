@@ -24,7 +24,7 @@ class camoco:
     ######################################### noqa
     VERSION = "0.0.1"
     GIT_URL = "https://github.com/kbasecollaborations/KB-CAMOCO.git"
-    GIT_COMMIT_HASH = "e96d8201782505d79f45186c9be130d52a82d6e8"
+    GIT_COMMIT_HASH = "bd71f6f5988b087dcb420fd1dc153f2a2eaf3202"
 
     #BEGIN_CLASS_HEADER
     #END_CLASS_HEADER
@@ -48,11 +48,13 @@ class camoco:
            structure: parameter "genome_ref" of type "GenomeRef" (Ref to a
            sequence set @id ws KBaseGenomes.Genome), parameter
            "association_ref" of type "AssociationRef" (Ref to a sequence set
-           @id ws KBaseGwasData.Associations), parameter "trait_matrix_ref"
-           of type "Trait_matrix_ref" (Ref to a sequence set @id ws
-           KBaseMatrices.TraitMatrix), parameter "workspace_name" of String,
-           parameter "workspace_id" of Long, parameter "window_size" of Long,
-           parameter "flank_limit" of Long
+           @id ws KBaseGwasData.Associations), parameter "exp_matrix_ref" of
+           type "Expr_matrix_ref" (Ref to a sequence set @id ws
+           KBaseMatrices.ExpressionMatrix), parameter "ontology" of type
+           "ontology_dictionary" (Ref to an ontology dictionary @id ws
+           KBaseOntology.OntologyDictionary), parameter "workspace_name" of
+           String, parameter "workspace_id" of Long, parameter "window_size"
+           of Long, parameter "flank_limit" of Long
         :returns: instance of type "ReportResults" -> structure: parameter
            "report_name" of String, parameter "report_ref" of String
         """
@@ -105,7 +107,7 @@ class camoco:
         # return the results
         return [output]
 
-    def build_refgen(self, ctx, params):
+    def build_refgen_obj(self, ctx, params):
         """
         Camoco wrapping function
         :param params: instance of type "BuildRefGenInputParams" ->
@@ -117,12 +119,12 @@ class camoco:
         """
         # ctx is the context object
         # return variables are: output
-        #BEGIN build_refgen
-        #END build_refgen
+        #BEGIN build_refgen_obj
+        #END build_refgen_obj
 
         # At some point might do deeper type checking...
         if not isinstance(output, dict):
-            raise ValueError('Method build_refgen return value ' +
+            raise ValueError('Method build_refgen_obj return value ' +
                              'output is not type dict as required.')
         # return the results
         return [output]

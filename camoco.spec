@@ -92,7 +92,7 @@ module camoco {
     funcdef build_co_exp_network(CoexpNetworkInputParams params) returns (ReportResults output) authentication required;
 
     /* Camoco wrapping function */
-    funcdef build_refgen(BuildRefGenInputParams params) returns (build_camoco_obj_out output) authentication required;
+    funcdef build_refgen_obj(BuildRefGenInputParams params) returns (build_camoco_obj_out output) authentication required;
     funcdef build_cob_object(BuildCOBInputParams params) returns (build_camoco_obj_out output) authentication required;
     funcdef build_ontology(BuildOntologyInputParams params) returns (build_camoco_obj_out output) authentication required;
     funcdef build_gwas(BuildGWASInputParams params) returns (build_camoco_obj_out output) authentication required;

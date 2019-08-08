@@ -342,10 +342,10 @@ class Application(object):
                              name='camoco.build_co_exp_network',
                              types=[dict])
         self.method_authentication['camoco.build_co_exp_network'] = 'required'  # noqa
-        self.rpc_service.add(impl_camoco.build_refgen,
-                             name='camoco.build_refgen',
+        self.rpc_service.add(impl_camoco.build_refgen_obj,
+                             name='camoco.build_refgen_obj',
                              types=[dict])
-        self.method_authentication['camoco.build_refgen'] = 'required'  # noqa
+        self.method_authentication['camoco.build_refgen_obj'] = 'required'  # noqa
         self.rpc_service.add(impl_camoco.build_cob_object,
                              name='camoco.build_cob_object',
                              types=[dict])
