@@ -103,6 +103,9 @@
                     "input_parameter": "exp_matrix_ref",
                     "target_property": "exp_matrix_ref"
                 },{
+                    "input_parameter": "ontology",
+                    "target_property": "ontology"
+                },{
                     "input_parameter": "window_size",
                     "target_property": "window_size"
                 },{

@@ -23,13 +23,7 @@ RUN pip install 'urllib3<1.24,>=1.21.1'
 
 RUN pip install camoco
 
-#RUN mkdir -p /kb/module/work/tmp/src/ && \
-#    cd /kb/module/work/tmp/src/ && \
-#    git clone https://github.com/LinkageIO/Camoco.git && \
-#    cd Camoco/ && \
-#    python setup.py install
 
-# -----------------------------------------
 
 COPY ./ /kb/module
 RUN mkdir -p /kb/module/work
@@ -38,6 +32,8 @@ RUN chmod -R a+rw /kb/module
 WORKDIR /kb/module
 
 RUN make all
+
+RUN echo "Data Initialization"
 
 ENTRYPOINT [ "./scripts/entrypoint.sh" ]
 

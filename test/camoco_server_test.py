@@ -3,6 +3,7 @@ import os
 import time
 import unittest
 from configparser import ConfigParser
+from pprint import pprint as pp
 
 from camoco.camocoImpl import camoco
 from camoco.camocoServer import MethodContext
@@ -53,7 +54,7 @@ class camocoTest(unittest.TestCase):
             print('Test workspace was deleted')
 
     # NOTE: According to Python unittest naming rules test method names should start from 'test'. # noqa
-    def test_your_method(self):
+    def test_ref_data(self):
         # Prepare test objects in workspace if needed using
         # self.getWsClient().save_objects({'workspace': self.getWsName(),
         #                                  'objects': []})
@@ -63,5 +64,39 @@ class camocoTest(unittest.TestCase):
         #
         # Check returned data with
         # self.assertEqual(ret[...], ...) or other unittest methods
-        ret = self.serviceImpl.build_co_exp_network(self.ctx, {'workspace_name': self.wsName,
-                                                             'parameter_1': 'Hello World!'})
+
+        # This test will build all the camoco objects using impl functions and data provided from the reference data
+        # mount. This data is provided by camoco, and roughly follows there tutorial process, and can be accessed here:
+        # https://camoco.readthedocs.io/en/latest/tutorial.html . Check out scripts/entrypoint.sh to see how reference
+        # data is downloaded and processed
+
+        pp(os.listdir('/data'))
+
+        # Refgen data
+        if os.path.exists('/data/ZmB73_5b_FGS.gff'):
+            self.refgen_file = '/data/ZmB73_5b_FGS.gff'
+        else:
+            raise FileNotFoundError('RefGen reference data does not exist at: /data/ZmB73_5b_FGS.gff')
+
+        # Expression data
+        if os.path.exists('/data/Hirsch2014_PANGenomeFPKM.txt'):
+            self.expr_file = '/data/Hirsch2014_PANGenomeFPKM.txt'
+        else:
+            raise FileNotFoundError('Expression reference data does not exist at: /data/Hirsch2014_PANGenomeFPKM.txt')
+
+        # Ontology base data
+        if os.path.exists('/data/go.obo'):
+            self.base_ontology_file = '/data/go.obo'
+        else:
+            raise FileNotFoundError('Base ontology reference data does not exist at: /data/go.obo')
+
+        # Maize ontology data
+        if os.path.exists('/data/zm_go.tsv'):
+            self.maize_ontology_file = '/data/zm_go.tsv'
+        else:
+            raise FileNotFoundError('Maize ontology reference data does not exist at: /data/zm_go.tsv')
+
+        if os.path.exits('/data/ZmIonome.allLocs.csv'):
+            self.maize_gwas_file = '/data/ZmIonome.allLocs.csv'
+        else:
+            raise FileNotFoundError('Maize GWAS reference data does not exist at: /data/ZmIonome.allLocs.csv')

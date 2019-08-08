@@ -342,10 +342,22 @@ class Application(object):
                              name='camoco.build_co_exp_network',
                              types=[dict])
         self.method_authentication['camoco.build_co_exp_network'] = 'required'  # noqa
-        self.rpc_service.add(impl_camoco.parse_gwas,
-                             name='camoco.parse_gwas',
+        self.rpc_service.add(impl_camoco.build_refgen,
+                             name='camoco.build_refgen',
                              types=[dict])
-        self.method_authentication['camoco.parse_gwas'] = 'required'  # noqa
+        self.method_authentication['camoco.build_refgen'] = 'required'  # noqa
+        self.rpc_service.add(impl_camoco.build_cob_object,
+                             name='camoco.build_cob_object',
+                             types=[dict])
+        self.method_authentication['camoco.build_cob_object'] = 'required'  # noqa
+        self.rpc_service.add(impl_camoco.build_ontology,
+                             name='camoco.build_ontology',
+                             types=[dict])
+        self.method_authentication['camoco.build_ontology'] = 'required'  # noqa
+        self.rpc_service.add(impl_camoco.build_gwas,
+                             name='camoco.build_gwas',
+                             types=[dict])
+        self.method_authentication['camoco.build_gwas'] = 'required'  # noqa
         self.rpc_service.add(impl_camoco.overlap_gwas_coexp,
                              name='camoco.overlap_gwas_coexp',
                              types=[dict])

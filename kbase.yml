@@ -10,6 +10,9 @@ service-language:
 module-version:
     0.0.1
 
+data-version:
+    0.0.2
+
 owners:
     [rmr,man4ish_gupta,pranjan77]
 
