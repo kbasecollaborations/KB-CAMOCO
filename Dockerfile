@@ -33,8 +33,6 @@ WORKDIR /kb/module
 
 RUN make all
 
-RUN echo "Data Initialization"
-
 ENTRYPOINT [ "./scripts/entrypoint.sh" ]
 
 CMD [ ]
