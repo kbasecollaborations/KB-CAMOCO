@@ -1,7 +1,7 @@
 #
 # define display information
 #
-name: Build Coexp. Network
+name: Run Camoco
 
 tooltip: |
     Create a coexpression network and run queries against it with GWAS and GO terms.

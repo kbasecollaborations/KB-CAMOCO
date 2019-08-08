@@ -70,8 +70,6 @@ class camocoTest(unittest.TestCase):
         # https://camoco.readthedocs.io/en/latest/tutorial.html . Check out scripts/entrypoint.sh to see how reference
         # data is downloaded and processed
 
-        pp(os.listdir('/data'))
-
         # Refgen data
         if os.path.exists('/data/ZmB73_5b_FGS.gff'):
             self.refgen_file = '/data/ZmB73_5b_FGS.gff'
@@ -96,7 +94,19 @@ class camocoTest(unittest.TestCase):
         else:
             raise FileNotFoundError('Maize ontology reference data does not exist at: /data/zm_go.tsv')
 
-        if os.path.exits('/data/ZmIonome.allLocs.csv'):
+        if os.path.exists('/data/ZmIonome.allLocs.csv'):
             self.maize_gwas_file = '/data/ZmIonome.allLocs.csv'
         else:
             raise FileNotFoundError('Maize GWAS reference data does not exist at: /data/ZmIonome.allLocs.csv')
+
+    def test_mk_refgen(self):
+        self.test_ref_data()
+        refgen_params = {
+            'filename': self.refgen_file,
+            'refgen_name': os.path.splitext(os.path.basename(self.refgen_file))[0],
+            'description': 'GFF Genome file from KBase'
+        }
+
+        ret = self.getImpl().buildrefgen(self.getContext(), refgen_params)
+
+        print(os.system('camoco ls'))

@@ -89,7 +89,7 @@ module camoco {
     } ReportResults;
 
     /* KBase Handling function */
-    funcdef build_co_exp_network(CoexpNetworkInputParams params)
+    funcdef runcamoco(CoexpNetworkInputParams params)
         returns (ReportResults output) authentication required;
 
     /* Camoco wrapping function */

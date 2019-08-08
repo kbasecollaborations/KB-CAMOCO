@@ -85,7 +85,7 @@
         "service-mapping": {
             "url": "",
             "name": "camoco",
-            "method": "build_co_exp_network",
+            "method": "runcamoco",
             "input_mapping": [
                 {
                     "narrative_system_variable": "workspace",

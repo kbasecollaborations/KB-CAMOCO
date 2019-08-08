@@ -338,10 +338,10 @@ class Application(object):
         self.serverlog.set_log_level(6)
         self.rpc_service = JSONRPCServiceCustom()
         self.method_authentication = dict()
-        self.rpc_service.add(impl_camoco.build_co_exp_network,
-                             name='camoco.build_co_exp_network',
+        self.rpc_service.add(impl_camoco.runcamoco,
+                             name='camoco.runcamoco',
                              types=[dict])
-        self.method_authentication['camoco.build_co_exp_network'] = 'required'  # noqa
+        self.method_authentication['camoco.runcamoco'] = 'required'  # noqa
         self.rpc_service.add(impl_camoco.buildrefgen,
                              name='camoco.buildrefgen',
                              types=[dict])

@@ -2,6 +2,7 @@
 #BEGIN_HEADER
 import logging
 import os
+import subprocess
 
 from installed_clients.KBaseReportClient import KBaseReport
 #END_HEADER
@@ -24,7 +25,7 @@ class camoco:
     ######################################### noqa
     VERSION = "0.0.1"
     GIT_URL = "https://github.com/kbasecollaborations/KB-CAMOCO.git"
-    GIT_COMMIT_HASH = "ada08dec0ac3e0ad21cb90fa2867200887d76514"
+    GIT_COMMIT_HASH = "3ef057e0e95013df53c3eef32bff36cc6bd78ae9"
 
     #BEGIN_CLASS_HEADER
     #END_CLASS_HEADER
@@ -41,7 +42,7 @@ class camoco:
         pass
 
 
-    def build_co_exp_network(self, ctx, params):
+    def runcamoco(self, ctx, params):
         """
         KBase Handling function
         :param params: instance of type "CoexpNetworkInputParams" ->
@@ -60,7 +61,7 @@ class camoco:
         """
         # ctx is the context object
         # return variables are: output
-        #BEGIN build_co_exp_network
+        #BEGIN runcamoco
 
         #
         # Input validation:
@@ -98,11 +99,11 @@ class camoco:
             except TypeError:
                 params['flank_limit'] = 1
 
-        #END build_co_exp_network
+        #END runcamoco
 
         # At some point might do deeper type checking...
         if not isinstance(output, dict):
-            raise ValueError('Method build_co_exp_network return value ' +
+            raise ValueError('Method runcamoco return value ' +
                              'output is not type dict as required.')
         # return the results
         return [output]
@@ -120,6 +121,13 @@ class camoco:
         # ctx is the context object
         # return variables are: output
         #BEGIN buildrefgen
+        if 'filename' not in params:
+            raise ValueError('No GFF file path is given to create camoco RefGen from.')
+        if 'refgen_name' not in params:
+            raise ValueError('No name is given to create camoco RefGen')
+        if 'description' not in params:
+            params['description'] = 'GFF Genome file from KBase'
+
         #END buildrefgen
 
         # At some point might do deeper type checking...
@@ -142,6 +150,7 @@ class camoco:
         # ctx is the context object
         # return variables are: output
         #BEGIN buildcob
+        pass
         #END buildcob
 
         # At some point might do deeper type checking...
@@ -164,6 +173,7 @@ class camoco:
         # ctx is the context object
         # return variables are: output
         #BEGIN buildontology
+        pass
         #END buildontology
 
         # At some point might do deeper type checking...
@@ -187,6 +197,7 @@ class camoco:
         # ctx is the context object
         # return variables are: output
         #BEGIN buildgwas
+        pass
         #END buildgwas
 
         # At some point might do deeper type checking...
@@ -209,6 +220,7 @@ class camoco:
         # ctx is the context object
         # return variables are: output
         #BEGIN overlapgwas
+        pass
         #END overlapgwas
 
         # At some point might do deeper type checking...
