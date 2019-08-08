@@ -1,5 +1,5 @@
 {
-   "name" : "build_cob_object",
+   "name" : "buildcob",
    "short_description" : "Build Camoco expression object from trait value matrix",
    "long_description" : "Given a delimted file of gene expression values this function builds a Camoco database object",
    "tags" : {

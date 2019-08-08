@@ -342,26 +342,26 @@ class Application(object):
                              name='camoco.build_co_exp_network',
                              types=[dict])
         self.method_authentication['camoco.build_co_exp_network'] = 'required'  # noqa
-        self.rpc_service.add(impl_camoco.build_refgen_obj,
-                             name='camoco.build_refgen_obj',
+        self.rpc_service.add(impl_camoco.buildrefgen,
+                             name='camoco.buildrefgen',
                              types=[dict])
-        self.method_authentication['camoco.build_refgen_obj'] = 'required'  # noqa
-        self.rpc_service.add(impl_camoco.build_cob_object,
-                             name='camoco.build_cob_object',
+        self.method_authentication['camoco.buildrefgen'] = 'required'  # noqa
+        self.rpc_service.add(impl_camoco.buildcob,
+                             name='camoco.buildcob',
                              types=[dict])
-        self.method_authentication['camoco.build_cob_object'] = 'required'  # noqa
-        self.rpc_service.add(impl_camoco.build_ontology,
-                             name='camoco.build_ontology',
+        self.method_authentication['camoco.buildcob'] = 'required'  # noqa
+        self.rpc_service.add(impl_camoco.buildontology,
+                             name='camoco.buildontology',
                              types=[dict])
-        self.method_authentication['camoco.build_ontology'] = 'required'  # noqa
-        self.rpc_service.add(impl_camoco.build_gwas,
-                             name='camoco.build_gwas',
+        self.method_authentication['camoco.buildontology'] = 'required'  # noqa
+        self.rpc_service.add(impl_camoco.buildgwas,
+                             name='camoco.buildgwas',
                              types=[dict])
-        self.method_authentication['camoco.build_gwas'] = 'required'  # noqa
-        self.rpc_service.add(impl_camoco.overlap_gwas_coexp,
-                             name='camoco.overlap_gwas_coexp',
+        self.method_authentication['camoco.buildgwas'] = 'required'  # noqa
+        self.rpc_service.add(impl_camoco.overlap,
+                             name='camoco.overlap',
                              types=[dict])
-        self.method_authentication['camoco.overlap_gwas_coexp'] = 'required'  # noqa
+        self.method_authentication['camoco.overlap'] = 'required'  # noqa
         self.rpc_service.add(impl_camoco.status,
                              name='camoco.status',
                              types=[dict])

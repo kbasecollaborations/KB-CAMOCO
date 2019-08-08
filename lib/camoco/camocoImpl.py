@@ -24,7 +24,7 @@ class camoco:
     ######################################### noqa
     VERSION = "0.0.1"
     GIT_URL = "https://github.com/kbasecollaborations/KB-CAMOCO.git"
-    GIT_COMMIT_HASH = "bd71f6f5988b087dcb420fd1dc153f2a2eaf3202"
+    GIT_COMMIT_HASH = "3e05ac8fae4053dedc4e8006315022c8f6170c13"
 
     #BEGIN_CLASS_HEADER
     #END_CLASS_HEADER
@@ -107,7 +107,7 @@ class camoco:
         # return the results
         return [output]
 
-    def build_refgen_obj(self, ctx, params):
+    def buildrefgen(self, ctx, params):
         """
         Camoco wrapping function
         :param params: instance of type "BuildRefGenInputParams" ->
@@ -119,17 +119,17 @@ class camoco:
         """
         # ctx is the context object
         # return variables are: output
-        #BEGIN build_refgen_obj
-        #END build_refgen_obj
+        #BEGIN buildrefgen
+        #END buildrefgen
 
         # At some point might do deeper type checking...
         if not isinstance(output, dict):
-            raise ValueError('Method build_refgen_obj return value ' +
+            raise ValueError('Method buildrefgen return value ' +
                              'output is not type dict as required.')
         # return the results
         return [output]
 
-    def build_cob_object(self, ctx, params):
+    def buildcob(self, ctx, params):
         """
         :param params: instance of type "BuildCOBInputParams" -> structure:
            parameter "filename" of String, parameter "cob_name" of String,
@@ -141,17 +141,17 @@ class camoco:
         """
         # ctx is the context object
         # return variables are: output
-        #BEGIN build_cob_object
-        #END build_cob_object
+        #BEGIN buildcob
+        #END buildcob
 
         # At some point might do deeper type checking...
         if not isinstance(output, dict):
-            raise ValueError('Method build_cob_object return value ' +
+            raise ValueError('Method buildcob return value ' +
                              'output is not type dict as required.')
         # return the results
         return [output]
 
-    def build_ontology(self, ctx, params):
+    def buildontology(self, ctx, params):
         """
         :param params: instance of type "BuildOntologyInputParams" ->
            structure: parameter "filename" of String, parameter
@@ -163,17 +163,17 @@ class camoco:
         """
         # ctx is the context object
         # return variables are: output
-        #BEGIN build_ontology
-        #END build_ontology
+        #BEGIN buildontology
+        #END buildontology
 
         # At some point might do deeper type checking...
         if not isinstance(output, dict):
-            raise ValueError('Method build_ontology return value ' +
+            raise ValueError('Method buildontology return value ' +
                              'output is not type dict as required.')
         # return the results
         return [output]
 
-    def build_gwas(self, ctx, params):
+    def buildgwas(self, ctx, params):
         """
         :param params: instance of type "BuildGWASInputParams" -> structure:
            parameter "file_name" of String, parameter "obj_name" of type
@@ -186,17 +186,17 @@ class camoco:
         """
         # ctx is the context object
         # return variables are: output
-        #BEGIN build_gwas
-        #END build_gwas
+        #BEGIN buildgwas
+        #END buildgwas
 
         # At some point might do deeper type checking...
         if not isinstance(output, dict):
-            raise ValueError('Method build_gwas return value ' +
+            raise ValueError('Method buildgwas return value ' +
                              'output is not type dict as required.')
         # return the results
         return [output]
 
-    def overlap_gwas_coexp(self, ctx, params):
+    def overlap(self, ctx, params):
         """
         :param params: instance of type "FindGWASCoexpOverlapParams" ->
            structure: parameter "window_size" of Long, parameter
@@ -208,12 +208,12 @@ class camoco:
         """
         # ctx is the context object
         # return variables are: output
-        #BEGIN overlap_gwas_coexp
-        #END overlap_gwas_coexp
+        #BEGIN overlap
+        #END overlap
 
         # At some point might do deeper type checking...
         if not isinstance(output, dict):
-            raise ValueError('Method overlap_gwas_coexp return value ' +
+            raise ValueError('Method overlap return value ' +
                              'output is not type dict as required.')
         # return the results
         return [output]

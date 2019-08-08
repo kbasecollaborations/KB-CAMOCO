@@ -1,5 +1,5 @@
 {
-   "name" : "build_refgen_obj",
+   "name" : "buildrefgen",
    "short_description" : "Build a Camoco RefGen object database from Genome GFF files",
    "long_description" : "Build a Camoco RefGen (Genome) object database from a provided file path of a genome GFF in ensemble format",
    "tags" : {

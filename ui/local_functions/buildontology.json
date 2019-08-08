@@ -1,5 +1,5 @@
 {
-   "name" : "build_ontology",
+   "name" : "buildontology",
    "short_description" : "Parse Ontology dictionary into Camoco object",
    "long_description" : "Provided a onotology dictionary and format dictionary build Camoco Ontology object",
    "tags" : {

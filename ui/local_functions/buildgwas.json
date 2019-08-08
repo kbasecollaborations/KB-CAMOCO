@@ -1,5 +1,5 @@
 {
-   "name" : "build_gwas",
+   "name" : "buildgwas",
    "short_description" : "Parse GWAS results into Camoco object",
    "long_description" : "Provided a GWAS associations file and assembly data, create a camoco network entry for gwas results",
    "tags" : {
